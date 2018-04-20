@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel='stylesheet' href='css/bootstrap-4.1.0.min.css'/>
+</head>
+<body>
+<div th:fragment="test" class="navbar navbar-dark bg-dark">
+    <!-- Image and text -->
+    <a class="navbar-brand" th:href="@{/}">
+        <img th:src="@{/img/003-thinking.png}" width="30" height="30" class="d-inline-block align-top" alt=""/>
+        Dream Foundry
+    </a>
+    <!-- Navigation -->
+    <div sec:authorize="isAuthenticated()">
+
+        <ul class="list-inline">
+            <li class="list-inline-item">
+                <a class="btn btn-light" th:href="@{/show}">Dashboard</a>
+            </li>
+            <li class="list-inline-item">
+                <form th:action="@{/logout}" th:method="post">
+                    <button class="btn btn-light inline">Logout</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+
+    <div sec:authorize="isAnonymous()">
+        <a class="btn btn-light" th:href="@{/login}">Login</a>
+        <a class="btn btn-light" th:href="@{/sign-up}">Register</a>
+    </div>
+
+</div>
+</body>
+</html>

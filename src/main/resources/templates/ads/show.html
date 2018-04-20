@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml" lang="en">
+
+<head th:replace="fragments/head :: main-header('Show All')"></head>
+
+<body>
+<nav th:replace="fragments/testnav :: test"></nav>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col col col-lg-6 col-md-6 text-center">
+            <div>
+                <h1>View All Ads</h1>
+                <div th:each="ad : ${allAds}" class="list-group">
+                    <div class="card">
+                        <div th:text="${ad.getCategory()}" class="card-header">
+                        </div>
+                        <div class="card-body">
+                            <h5 th:text="${ad.getTitle()}" class="card-title"></h5>
+                            <p th:text="${ad.getBody()}" class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer th:include="fragments/footer :: footer"></footer>
+</body>
+</html>

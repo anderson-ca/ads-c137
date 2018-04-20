@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="fragments/head :: main-header('Home')"></head>
+<body>
+<nav th:replace="fragments/testnav :: test"></nav>
+<div class="container-fluid">
+    <!---------------------------------------------------------------------------------------------------------->
+    <!------------------------------ HEADER AND SUB-HEADER ( 1ST ROW ) ----------------------------------------->
+    <!---------------------------------------------------------------------------------------------------------->
+    <div class="row" id="first-row">
+        <div class="col">
+            <div class="text-center header-text first-block-text">
+                <h1 class="first-block-text">Share your Ideas</h1>
+                <h2 class="first-block-text">Share <span class="stick"> | </span> Inspire <span
+                        class="stick"> | </span>
+                    create</h2>
+            </div>
+        </div>
+    </div> <!-- HEADER AND SUB-HEADER / -->
+    <!---------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------ ABOUT ( 1st ROW ) --------------------------------------------->
+    <!---------------------------------------------------------------------------------------------------------->
+    <div class="container-fluid" id="second-row">
+        <div class="row">
+            <div class="col col-lg-12">
+                <h2 class="text-center about-header second-block-text">About</h2>
+                <hr>
+            </div>
+            <div class="col col-lg-12">
+                <p class="about-text second-block-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+                    animi
+                    aspernatur at, aut deserunt doloremque id, iste iusto libero mollitia necessitatibus pariatur
+                    praesentium quam reiciendis rerum totam vitae. Aliquam, exercitationem!</p>
+                <p class="about-text second-block-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Adipisci
+                    assumenda atque aut consequuntur distinctio dolor, eum hic incidunt iste iure modi quia quibusdam
+                    quo
+                    repellat sequi soluta tempore, tenetur totam?</p>
+            </div> <!-- ABOUT COLUMN / -->
+        </div> <!-- ABOUT / -->
+    </div> <!-- CONTAINER / -->
+    <!---------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------ TOOLS ( 3RD ROW ) --------------------------------------------->
+    <!---------------------------------------------------------------------------------------------------------->
+    <div class="row" id="third-row">
+        <div class="col col-lg-4 col-md-4">
+            <img class="img-test" th:src="@{/img/005-megaphone.png}" alt="test">
+            <p class="third-block-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur
+                corporis culpa, eius, esse
+                excepturi facere, fugiat impedit iste itaque laboriosam libero omnis placeat porro recusandae repellat
+                repellendus temporibus. Explicabo?
+            </p>
+        </div>
+        <div class="col col-lg-4 col-md-4">
+            <img class="img-test" th:src="@{/img/006-brainstorm.png}" alt="test">
+            <p class="third-block-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur
+                corporis culpa, eius, esse
+                excepturi facere, fugiat impedit iste itaque laboriosam libero omnis placeat porro recusandae repellat
+                repellendus temporibus. Explicabo?
+            </p>
+        </div>
+        <div class="col col-lg-4 col-md-4 img-center">
+            <img class="img-test" th:src="@{/img/004-light-bulb.png}" alt="test">
+            <p class="third-block-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur
+                corporis culpa, eius, esse
+                excepturi facere, fugiat impedit iste itaque laboriosam libero omnis placeat porro recusandae repellat
+                repellendus temporibus. Explicabo?
+            </p>
+        </div>
+    </div>
+</div>
+<script src="js/animation.js"></script>
+<footer th:include="fragments/footer :: footer"></footer>
+</body>
+</html>

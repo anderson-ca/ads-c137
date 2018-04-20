@@ -1,0 +1,167 @@
+
+/*************************************************
+
+    GENERAL BODY AND HTML STYLING.
+
+**************************************************/
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/********************************************************
+
+    GENERAL CONTAINER COLUMNS AND ROWS DIMENSIONS.
+
+*********************************************************/
+
+.container-fluid {
+    background-color: rgba(255, 251, 255, 0.15);
+}
+
+.row {
+    /*border: solid 1px #000;*/
+}
+
+.col {
+    /*border: solid 1px #000;*/
+}
+
+/********************************************************
+
+    NAVIGATION STYLING.
+
+*********************************************************/
+
+.navbar {
+    margin: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.navbar-default .navbar-brand {
+    color: #414141;
+    font-size: 25px;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #464646;
+    font-family: inherit;
+    font-weight: normal;
+    font-size: 25px;
+    padding: 20px;
+}
+
+.stick {
+    color: #000;
+    margin: 0 20px 0 20px;
+
+}
+
+/********************************************************
+
+    1ST BLOCK STYLING.
+
+*********************************************************/
+
+.first-block-text {
+    color: #fff;
+    font-weight: lighter;
+}
+
+#first-row {
+    height: 900px;
+    background-image: url("../img/desk-calc.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: 60px;
+    z-index: -1;
+
+}
+
+.header-text h1 {
+    margin-top: 450px;
+    font-size: 120px;
+
+}
+
+h2 {
+    font-size: 30px;
+    padding-right: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+
+/********************************************************
+
+    2ND BLOCK STYLING.
+
+*********************************************************/
+
+.second-block-text {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#second-row {
+    height: 550px;
+    background-color: #ffffff;
+}
+
+.about-header {
+    font-size: 60px;
+}
+
+.about-col {
+    padding: 0 200px;
+    max-height: 100%;
+}
+
+.about-text {
+    font-size: 20px;
+    margin-bottom: 55px;
+    text-align: center;
+}
+
+/********************************************************
+
+    3rd BLOCK STYLING.
+
+*********************************************************/
+
+#third-row {
+    background-color: rgba(66, 66, 66, 0.9);
+    height: 600px;
+    width: auto;
+    text-align: center;
+}
+
+.img-test {
+    position: relative;
+    height: 170px;
+    width: 170px;
+    margin: 100px 0 60px 0;
+    bottom: -120px;
+    transition-duration: 2s;
+
+}
+
+.third-block-text {
+    position: relative;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 55px;
+    text-align: center;
+    padding: 0 20px 0 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    display: none;
+
+}

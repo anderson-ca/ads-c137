@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head th:replace="fragments/head :: main-header('Profile')"></head>
+
+<body>
+
+<nav th:replace="fragments/testnav :: test"></nav>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col col col-lg-12">
+            <h1>Welcome <span th:text="${user.username}"></span></h1>
+            <h5>The email related to this account is <span th:text="${user.email}"></span></h5>
+        </div>
+        <div class="col col-lg-12">
+            <a th:href="@{/create}" class="btn btn-primary">Post Idea</a>
+        </div>
+        <div class="col col-lg-6 col-md-6">
+            <div th:each="ad : ${adList}" class="list-group">
+                <div class="card">
+                    <div th:text="${ad.getCategory()}" class="card-header">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <h5 th:text="${ad.getTitle()}" class="card-title">Special title treatment</h5>
+                        <p th:text="${ad.getBody()}" class="card-text"></p>
+                        <a th:href="@{/edit/{id}(id=${ad.getId()})}" class="btn btn-primary">Edit Post</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>"
+<footer th:replace="fragments/footer :: footer"></footer>
+</body>
+</html>
